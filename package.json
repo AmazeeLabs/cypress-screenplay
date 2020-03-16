@@ -1,17 +1,19 @@
 {
   "name": "cypress-screenplay",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Screenplay pattern implementation for cypress.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Philipp Melab",
   "license": "MIT",
   "scripts": {
-    "cypress": "cypress open",
+    "lint": "eslint '*/**.ts'",
+    "format": "prettier --write **/*.{js,jsx,ts,tsx,json,md}",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "typecheck": "tsc --noEmit",
     "test": "mocha -r ts-node/register __tests__/*.spec.ts && cypress run",
-    "prepublish": "tsc",
-    "format": "prettier --write */**.ts",
-    "lint": "eslint '*/**.ts'"
+    "cypress": "cypress open",
+    "prepublish": "tsc"
   },
   "devDependencies": {
     "@types/mocha": "^7.0.2",
@@ -30,9 +32,11 @@
     "mocha": "^7.1.0",
     "mocha-typescript": "^1.1.17",
     "prettier": "^1.19.1",
+    "semantic-release": "^17.0.4",
     "sinon": "^9.0.1",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.6.2",
     "typescript": "^3.8.3"
-  }
+  },
+  "dependencies": {}
 }

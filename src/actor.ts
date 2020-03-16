@@ -57,7 +57,7 @@ export class Actor {
    *   The set of abilities.
    */
   constructor(abilities?: object[]) {
-    this.abilities = abilities || [UseCypress];
+    this.abilities = abilities || [new UseCypress()];
   }
 
   /**

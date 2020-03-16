@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - 10
+
+cache:
+  directories:
+    - ~/.npm
+    - ~/.cache
+
+install:
+  - npm install --ignore-engines
+
+script:
+  - npm run lint
+  - npm run format:check
+  - npm run typecheck
+  - npm run test
+
+notifications:
+  email: false
