@@ -110,7 +110,7 @@ describe('Question', () => {
     }
   }
 
-  it('executes an interaction to answer a quest', () => {
+  it('executes an interaction to answer a question', () => {
     const actor = new Actor([new UseUpperCase()]);
     actor.ask(Transform, 'Foo', res => {
       expect(res).to.equal('FOO');
