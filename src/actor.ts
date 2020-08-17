@@ -40,7 +40,10 @@ export class Actor {
 
     // Search for the first matching ability.
     const ability = this.abilities
-      .filter((ability): ability is T => ability.constructor.name === type.prototype.constructor.name)
+      .filter(
+        (ability): ability is T =>
+          ability.constructor.name === type.prototype.constructor.name
+      )
       .shift();
 
     // If no ability is found, throw an exception.
