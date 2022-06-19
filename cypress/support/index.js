@@ -1,1 +1,1 @@
-import '../../dist/commands';
+import './command';

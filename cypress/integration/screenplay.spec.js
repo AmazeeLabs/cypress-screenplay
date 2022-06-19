@@ -1,4 +1,5 @@
-import {readListItems, visitTestPage} from "../support/interactions";
+/// <reference types = "cypress" />
+import { readListItems, visitTestPage } from '../support/interactions';
 
 describe('Screenplay', () => {
   it('executes tasks and questions', () => {
@@ -6,6 +7,6 @@ describe('Screenplay', () => {
     cy.ask(readListItems)
       .should('contain', 'A')
       .should('contain', 'B')
-      .should('contain', 'C')
+      .should('contain', 'C');
   });
 });
