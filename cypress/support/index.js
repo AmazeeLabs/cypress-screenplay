@@ -1,1 +1,1 @@
-import './command';
+import '../../dist/cypress/support/command';
